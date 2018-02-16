@@ -1,0 +1,68 @@
+/*middle align everything in the text field using the universal selector*/
+.textfield * {
+    vertical-align: middle;
+}
+
+/*flex box css*/
+#outer {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#inner {
+    display: flex;
+    flex-direction: column;
+}
+
+/*pretty*/
+h1 {
+    color: rgb(121, 207, 160);
+    text-align: center;
+    font: bold italic 250% fantasy;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    padding-left: 3%;
+    vertical-align: middle;
+    max-width: 30%;
+    height: auto;
+}
+
+/*obtained from aharris examples and modified*/
+@media (max-width: 600px) {
+    /*special instructions for narrower screens */
+    h1 {
+        color: rgb(172, 83, 172);
+        font: bold italic 150% fantasy;
+    }
+
+    #outer {
+        background-color: #8291d6;
+
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #innerest {
+        text-align: center;
+    }
+
+    img {
+        padding-left: 3%;
+        max-width: 30%;
+        height: auto;
+    }
+}
+     

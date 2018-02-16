@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang = "ja"> 
+  <head>
+    <meta charset = "UTF-8">
+    <title>日本語</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-startup-image" href="../images/ya.png">
+    <link rel="apple-touch-icon" href="../images/ya.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="../images/ya.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="196x196" href="../images/ya.png">
+    <link rel="shortcut icon" sizes="128x128" href="../images/ya.png">
+
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "Style.css" />
+          <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+          <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+          <script src="jquery.mobile-1.4.5.min.js"></script>
+          <script type = "text/javascript">
+            function checkValues(){
+              var characters = $("#characters :radio:checked").val();
+              var name = $("#myText").val();
+              if (characters == 46 ) {
+                if (name.toUpperCase() == "JOSH") {
+                  alert("Wow! I'm surprised.");
+                }
+                alert(name + " got the correct answer");
+                alert("Did you know there is another alphabet called katakana? This means there are " + 2*characters + " in total");
+              } else {
+                alert(name + " needs to study harder");
+              } 
+            } // end function
+  
+          </script>
+  </head>
+  <body>
+    <h1>Can you read Japanese?</h1>
+    <form>
+      <fieldset>
+        <p>
+          <label>名前</label>
+          <input type = "text"
+                 id = "myText"
+                 value = "text here" />
+        </p>
+        <p> 
+          <label>秘密を言って</label>
+          <input type = "password"
+                 id = "myPwd"
+                 value = "secret" />
+        </p>
+        <p class="textfield">
+            <label>物語を書いてください</label>
+            <textarea id = "myTextArea" rows = "5" cols = "80">Your text here
+            </textarea>
+        </p>
+        <fieldset data-role="controlgroup" id="characters">
+          <legend>How many characters are there in the Hiragana alphabet?</legend>
+          <input type="radio" name="radio-choice" id="radio-choice-1" value="1" checked="checked">
+          <label for="radio-choice-1">1</label>
+          <input type="radio" name="radio-choice" id="radio-choice-2" value="23">
+          <label for="radio-choice-2">23</label>
+          <input type="radio" name="radio-choice" id="radio-choice-3" value="46">
+          <label for="radio-choice-3">46</label>
+          <input type="radio" name="radio-choice" id="radio-choice-4" value="37">
+        <label for="radio-choice-4">37</label>
+        </fieldset>
+      </fieldset>
+
+    </form>
+    <button onclick = "checkValues()"> Submit </button> 
+
+  </body>
+</html>
